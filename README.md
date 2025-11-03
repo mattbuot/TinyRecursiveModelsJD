@@ -54,14 +54,14 @@ Here is a link to a W&B report demonstrating one of the best training run: [repo
 
 ## Other attempts
 
-### 1. Adding dropout didn't yield any significant improvement in generalization
+1. Adding dropout didn't yield any significant improvement in generalization
 
 
-### 2. Switching the loss to a differential loss produced some interesting results, overall performance was close to the original version but the model was sometime solving different puzzles which is worth mentioning. The goal was to guide the model more towards refining its previous outputs rather than producing the right answer at every shot.
+2. Switching the loss to a differential loss produced some interesting results, overall performance was close to the original version but the model was sometime solving different puzzles which is worth mentioning. The goal was to guide the model more towards refining its previous outputs rather than producing the right answer at every shot.
 
 $$differential\_loss = loss(logits_i - logits_{i-1})$$
 
-### 3. Perturbation rate: the idea was to add some noise in between every refinement step at training time to perform a more robust reasoning trace. This feature still has some potential and requires further testing.
+3. Perturbation rate: the idea was to add some noise in between every refinement step at training time to perform a more robust reasoning trace. This feature still has some potential and requires further testing.
 
 ## EXTERNAL: Jacobian Descent with TorchJD ![image](https://github.com/TorchJD/torchjd/blob/main/docs/source/icons/favicon-32x32.png?raw=true) 
 
